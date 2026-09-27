@@ -1,0 +1,38 @@
+{
+  "selected_hashes": [
+    "b73d09ce90a5bc3f0b50fcbb0f6417b5343b0e6e029a42432fbb75f7251f538c",
+    "d7d59064d01de84181bc2674d876609e8cdd69f6a15602f3d46d0c290cf8f324",
+    "6a006820d6e191048c19a01a8e7b88c21d1b3de7c6d0e466c618a40493acef99",
+    "762b6d12b47c0b5fbc526eebdd63a9065b282e1486a313b13481bb5fbc6ae844",
+    "d06ab7f63133c543138a316c00bfb9f73157d7b427fa239dbf47723257e4943a",
+    "aa53c4da8642b40c14518d9036cce43d8893d4250099a34172f456d84e53030e"
+  ],
+  "walk_forward": {
+    "train_months": 6,
+    "step_months": 1,
+    "fee_bps": 4.0
+  },
+  "ridge": {
+    "alphas": [1.0, 10.0, 50.0, 200.0],
+    "sample_half_life_days": 90.0
+  },
+  "lightgbm": {
+    "objective": "huber",
+    "alpha": 0.85,
+    "learning_rate": 0.025,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_child_samples": 400,
+    "reg_alpha": 0.5,
+    "reg_lambda": 5.0
+  },
+  "execution": {
+    "z_window": 336,
+    "smooth_span": 8,
+    "neutral_zone": 0.2,
+    "position_deadband": 0.004,
+    "adaptive_lookback_days": 90,
+    "adaptive_max_model_weight": 0.25
+  }
+}
+

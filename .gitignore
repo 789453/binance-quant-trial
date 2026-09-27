@@ -1,0 +1,65 @@
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+config/*.local.json
+*密钥*
+**/config.private.json
+**/config.*-live.json
+**/*secret*
+
+# Market data, models, caches, databases and runtime state
+data/
+runtime/
+snapshots/
+*.parquet
+*.feather
+*.pickle
+*.pkl
+*.joblib
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+*.pid
+*.zip
+*.CHECKSUM
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated research output (source docs live under docs/)
+reports/
+/README_CN.md
+
+# The local Freqtrade checkout is an independent repository. Deployable adapters
+# live under deployment/freqtrade instead.
+/freqtrade/
+deployment/freqtrade/user_data/config*.private.json
+deployment/freqtrade/user_data/*.sqlite*
+
+# Large reference chart is reproducible and not required by the factor registry.
+reference/factor_combo_strategy/crypto_time_series_factor_returns.html
+
+# Local operational helpers from the original workstation are not portable.
+tools/binance-public-data/
+tools/check_binance_account.*
+tools/create_current_snapshot.py
+tools/download_micro_data.ps1
+tools/download_recent_futures_data.ps1
+tools/micro_status.ps1
+tools/prepare_data.ps1
+tools/run_backtest.ps1
+tools/run_lookahead.ps1
+tools/start_*.ps1
+tools/stop_*.ps1
+tools/test_binance_connectivity.ps1
+tools/trim_freqtrade_data.py
+
+# Local editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
